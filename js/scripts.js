@@ -12,7 +12,7 @@ for (let i=0; i < pokemonList.length; i++){
   console.log(pokemonList.name + "Wow, that's big!")
 }
 
-document.write(pokemonList)
+document.write(pokemonList[0])
 
 
   pokemonList[1].name
