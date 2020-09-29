@@ -40,7 +40,7 @@ pokemonRepository.add({ name: 'Charmander' });
 console.log(pokemonRepository.add( ' Charmander' ));
 
 pokemonList.forEach(function(pokemon) {
-  write(pokemon.name + ' is size ' + pokemon.height + ' and is the type ' + pokemon.types)
+  document.write(pokemon.name + ' is size ' + pokemon.height + ' and is the type ' + pokemon.types)
 })
 
 
