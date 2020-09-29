@@ -35,8 +35,12 @@ let pokemonRepository = (function () {
 })();
 
 
+console.log(pokemonRepository.getAll() );
+pokemonRepository.add({ name: 'Charmander' });
+console.log(pokemonRepository.add( 'Charmander' );)
+
 pokemonList.forEach(function(pokemon) {
-  document.write(pokemon.name + ' is size ' + pokemon.height + ' and is the type ' + pokemon.types)
+  write(pokemon.name + ' is size ' + pokemon.height + ' and is the type ' + pokemon.types)
 })
 
 
