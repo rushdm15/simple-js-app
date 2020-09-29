@@ -1,8 +1,20 @@
 //[name, height, types]
 let pokemonList = [
-{ name : "Bulbasaur", height : 7, types : ['grass', 'poison'] },
-{ name : "Pikachu", height : 2, types : ['electricity'] },
-{ name : "Squirtle", height : 3, types : ['grass', 'water'] }
+{
+  name : "Bulbasaur",
+  height : 7,
+  types : ['grass', 'poison']
+},
+{
+  name : "Pikachu",
+  height : 2,
+  types : ['electricity']
+ },
+{
+  name : "Squirtle",
+  height : 3,
+  types : ['grass', 'water']
+}
 ];
 
 // let pokemonRepository = (function () {
