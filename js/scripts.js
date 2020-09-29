@@ -37,7 +37,7 @@ let pokemonRepository = (function () {
 
 console.log(pokemonRepository.getAll() );
 pokemonRepository.add({ name: 'Charmander' });
-console.log(pokemonRepository.add(item));
+console.log(pokemonRepository.add( ' Charmander' ));
 
 pokemonList.forEach(function(pokemon) {
   write(pokemon.name + ' is size ' + pokemon.height + ' and is the type ' + pokemon.types)
