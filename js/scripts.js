@@ -5,16 +5,16 @@ let pokemonList = [
 { name : "Squirtle", height : 3, types : ['grass', 'water'] }
 ];
 
-let pokemonRepository = (function () {
-  let pokemonList = [];
-
-  return {
-    add: function(pokemon) {
-      pokemonList.push(pokemon);
-    }
-  };
-})();
-pokemonRepository.add({ name: 'Charmander' });
+// let pokemonRepository = (function () {
+//   let pokemonList = [];
+//
+//   return {
+//     add: function(pokemon) {
+//       pokemonList.push(pokemon);
+//     }
+//   };
+// })();
+// pokemonRepository.add({ name: 'Charmander' });
 
 
 let pokemonRepository = (function () {
