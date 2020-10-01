@@ -1,4 +1,4 @@
-.button {
+.button-class {
   /* overwrites browser defaults and resets the border */
   border: none;
   /* takes the font from the outer container */
