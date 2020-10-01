@@ -49,14 +49,15 @@ let pokemonRepository = (function () {
     return pokemon
   }
 
-  let listItem = document.createElement('li');
-  let pokemon-list = document.querySelector('.pokemon-list');
-  let button = document.createElement('button');
+pokemonRepository.getAll().forEach(function (pokemon) {
+  let listPokemon = document.createElement('li');
+  let pokemonlist = document.querySelector('.pokemon-list');
+  let button = document.createElement('.button');
   button.innerText = "pokemon.name";
   button.classList.add(button);
-  pokemon-list.appendChild(button);
-  ul.appendChild(pokemon-list);
-})();
+  listpokemon.appendChild(button);
+  pokemonList.appendChild(listpokemon);
+});
 
 
 console.log(pokemonRepository.getAll() );
