@@ -51,12 +51,20 @@ console.log(pokemonRepository.getAll() );
 pokemonRepository.add({ name: 'Charmander' });
 console.log(pokemonRepository.add( ' Charmander' ));
 
+
 pokemonList.forEach(function(pokemon) {
   // document.write(pokemon.name + ' is size ' + pokemon.height + ' and is the type ' + pokemon.types + '<br>')
   document.querySelector('ul');
 
 let listItem = document.createElement('li');
 
+let pokemon-list = document.querySelector('.pokemon-list');
+let button = document.createElement('button');
+button.innerText = "pokemon.name";
+pokemon-list.appendChild(button);
+ul.appendChild(pokemon-list);
+
+})
 
 
 
