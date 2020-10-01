@@ -30,7 +30,7 @@ let pokemonRepository = (function () {
 // pokemonRepository.add({ name: 'Charmander' });
 
   function add(pokemon) {
-    pokemonList.push(pokemon);
+    repository.push(pokemon);
   }
 
   function getAll() {
@@ -50,11 +50,11 @@ pokemonRepository.add({ name: 'Charmander', height: '10', types: ['fire'] });
 console.log(pokemonRepository.getAll());
 
 pokemonRepository.getAll().forEach(function (pokemon) {
-  let listPokemon = document.createElement('li');
   let pokemonlist = document.querySelector('.pokemon-list');
-  let button = document.createElement('.button');
+  let listpokemon = document.createElement('li');
+  let button = document.createElement('button');
   button.innerText = pokemon.name;
-  button.classList.add(button);
+  button.classList.add("button-class");
   listpokemon.appendChild(button);
   pokemonList.appendChild(listpokemon);
 });
