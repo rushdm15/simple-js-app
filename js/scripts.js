@@ -48,6 +48,12 @@ let pokemonRepository = (function () {
   function addListItem() {
     return pokemon
   }
+})();
+
+
+console.log(pokemonRepository.getAll());
+pokemonRepository.add({ name: 'Charmander' });
+console.log(pokemonRepository.add( ' Charmander' ));
 
 pokemonRepository.getAll().forEach(function (pokemon) {
   let listPokemon = document.createElement('li');
@@ -58,12 +64,6 @@ pokemonRepository.getAll().forEach(function (pokemon) {
   listpokemon.appendChild(button);
   pokemonList.appendChild(listpokemon);
 });
-
-
-console.log(pokemonRepository.getAll() );
-pokemonRepository.add({ name: 'Charmander' });
-console.log(pokemonRepository.add( ' Charmander' ));
-
 
 pokemonList.forEach(function(pokemon) {
   // document.write(pokemon.name + ' is size ' + pokemon.height + ' and is the type ' + pokemon.types + '<br>')
