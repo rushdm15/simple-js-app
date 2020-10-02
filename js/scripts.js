@@ -1,6 +1,6 @@
 //[name, height, types]
 let pokemonRepository = (function () {
-  let pokemonList = [
+  let repository = [
   {
   name : "Bulbasaur",
   height : 7,
@@ -30,11 +30,11 @@ let pokemonRepository = (function () {
 // pokemonRepository.add({ name: 'Charmander' });
 
   function add(pokemon) {
-    pokemonList.push(pokemon);
+    repository.push(pokemon);
   }
 
   function getAll() {
-    return pokemonList;
+    return repository;
   }
 
   return {
