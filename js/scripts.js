@@ -59,10 +59,10 @@ pokemonRepository.getAll().forEach(function (pokemon) {
   pokemonList.appendChild(listpokemon);
 });
 
-pokemonList.forEach(function(pokemon) {
-  // document.write(pokemon.name + ' is size ' + pokemon.height + ' and is the type ' + pokemon.types + '<br>')
-  document.querySelector('ul');
-})
+// pokemonList.forEach(function(pokemon) {
+//   // document.write(pokemon.name + ' is size ' + pokemon.height + ' and is the type ' + pokemon.types + '<br>')
+//   document.querySelector('ul');
+// })
 
 
 
