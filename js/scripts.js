@@ -37,9 +37,20 @@ let pokemonRepository = (function () {
     return repository;
   }
 
+  function addListItem (pokemon) {
+    let pokemonlist = document.querySelector('.pokemon-list');
+    let listpokemon = document.createElement('li');
+    let button = document.createElement('button');
+    button.innerText = pokemon.name;
+    button.classList.add("button-class");
+    listpokemon.appendChild(button);
+    pokemonlist.appendChild(listpokemon);
+  }
+
   return {
     add: add,
-    getAll: getAll
+    getAll: getAll,
+    addListItem: addListItem
   };
 })();
 
@@ -50,13 +61,7 @@ pokemonRepository.add({ name: 'Charmander', height: '10', types: ['fire'] });
 console.log(pokemonRepository.getAll());
 
 pokemonRepository.getAll().forEach(function (pokemon) {
-  let pokemonlist = document.querySelector('.pokemon-list');
-  let listpokemon = document.createElement('li');
-  let button = document.createElement('button');
-  button.innerText = pokemon.name;
-  button.classList.add("button-class");
-  listpokemon.appendChild(button);
-  pokemonlist.appendChild(listpokemon);
+  pokemonRepository.addListItem (pokemon);
 });
 
 // pokemonList.forEach(function(pokemon) {
