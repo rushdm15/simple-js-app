@@ -76,52 +76,52 @@ let pokemonRepository = (function () {
   };
 })();
 
-let pokemonRepository = (function () {
-  let pokemonList = [];
-  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
-
-  // Other functions remain here
-  function loadList(){}
-
-  function loadDetails(){}
-
-  function loadList() {
-    return fetch(apiUrl).then(function (response) {
-      return response.json();
-    }).then(function (json) {
-      json.results.forEach(function (item) {
-        let pokemon = {
-          name: item.name,
-          detailsUrl: item.url
-        };
-        add(pokemon);
-      });
-    }).catch(function (e) {
-      console.error(e);
-    })
-  }
-
-  function loadDetails(item) {
-     let url = item.detailsUrl;
-     return fetch(url).then(function (response) {
-       return response.json();
-     }).then(function (details) {
-       // Now we add the details to the item
-       item.imageUrl = details.sprites.front_default;
-       item.height = details.height;
-       item.types = details.types;
-     }).catch(function (e) {
-       console.error(e);
-     });
-   }
-
-  return {
-    add: add,
-    getAll: getAll,
-    loadList: loadList,
-    loadDetails: loadDetails
-  };
-})();
+// let pokemonRepository = (function () {
+//   let pokemonList = [];
+//   let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
+//
+//   // Other functions remain here
+//   function loadList(){}
+//
+//   function loadDetails(){}
+//
+//   function loadList() {
+//     return fetch(apiUrl).then(function (response) {
+//       return response.json();
+//     }).then(function (json) {
+//       json.results.forEach(function (item) {
+//         let pokemon = {
+//           name: item.name,
+//           detailsUrl: item.url
+//         };
+//         add(pokemon);
+//       });
+//     }).catch(function (e) {
+//       console.error(e);
+//     })
+//   }
+//
+//   function loadDetails(item) {
+//      let url = item.detailsUrl;
+//      return fetch(url).then(function (response) {
+//        return response.json();
+//      }).then(function (details) {
+//        // Now we add the details to the item
+//        item.imageUrl = details.sprites.front_default;
+//        item.height = details.height;
+//        item.types = details.types;
+//      }).catch(function (e) {
+//        console.error(e);
+//      });
+//    }
+//
+//   return {
+//     add: add,
+//     getAll: getAll,
+//     loadList: loadList,
+//     loadDetails: loadDetails
+//   };
+// })();
 
 
 console.log(pokemonRepository.getAll());
