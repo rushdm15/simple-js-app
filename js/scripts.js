@@ -130,10 +130,11 @@ pokemonRepository.add({ name: 'Charmander', height: '10', types: ['fire'] });
 // console.log(pokemonRepository.add( ' Charmander' ));
 console.log(pokemonRepository.getAll());
 
-pokemonRepository.getAll().forEach(function (pokemon) {
-  pokemonRepository.addListItem (pokemon);
-});
-
+pokemonRepository.loadList().then(function() {
+  pokemonRepository.getAll().forEach(function (pokemon) {
+    pokemonRepository.addListItem (pokemon);
+  });
+})
 // pokemonList.forEach(function(pokemon) {
 //   // document.write(pokemon.name + ' is size ' + pokemon.height + ' and is the type ' + pokemon.types + '<br>')
 //   document.querySelector('ul');
