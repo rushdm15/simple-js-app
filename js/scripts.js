@@ -14,11 +14,11 @@ let pokemonRepository = (function () {
 // pokemonRepository.add({ name: 'Charmander' });
 
   function add(pokemon) {
-    repository.push(pokemon);
+    pokemonList.push(pokemon);
   }
 
   function getAll() {
-    return repository;
+    return pokemonList;
   }
 
   function showDetails(pokemon) {
