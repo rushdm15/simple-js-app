@@ -3,17 +3,6 @@ let pokemonRepository = (function () {
   let pokemonList = [];
   let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 
-// let pokemonRepository = (function () {
-//   let pokemonList = [];
-//
-//   return {
-//     add: function(pokemon) {
-//       pokemonList.push(pokemon);
-//     }
-//   };
-// })();
-// pokemonRepository.add({ name: 'Charmander' });
-
   function add(pokemon) {
     pokemonList.push(pokemon);
   }
@@ -101,54 +90,6 @@ let pokemonRepository = (function () {
   };
 })();
 
-// let pokemonRepository = (function () {
-//   let pokemonList = [];
-//   let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
-//
-//   // Other functions remain here
-//   function loadList(){}
-//
-//   function loadDetails(){}
-//
-//   function loadList() {
-//     return fetch(apiUrl).then(function (response) {
-//       return response.json();
-//     }).then(function (json) {
-//       json.results.forEach(function (item) {
-//         let pokemon = {
-//           name: item.name,
-//           detailsUrl: item.url
-//         };
-//         add(pokemon);
-//       });
-//     }).catch(function (e) {
-//       console.error(e);
-//     })
-//   }
-//
-//   function loadDetails(item) {
-//      let url = item.detailsUrl;
-//      return fetch(url).then(function (response) {
-//        return response.json();
-//      }).then(function (details) {
-//        // Now we add the details to the item
-//        item.imageUrl = details.sprites.front_default;
-//        item.height = details.height;
-//        item.types = details.types;
-//      }).catch(function (e) {
-//        console.error(e);
-//      });
-//    }
-//
-//   return {
-//     add: add,
-//     getAll: getAll,
-//     loadList: loadList,
-//     loadDetails: loadDetails
-//   };
-// })();
-
-
 console.log(pokemonRepository.getAll());
 pokemonRepository.add({ name: 'Charmander', height: '10', types: ['fire'] });
 // console.log(pokemonRepository.add( ' Charmander' ));
@@ -159,39 +100,6 @@ pokemonRepository.loadList().then(function() {
     pokemonRepository.addListItem (pokemon);
   });
 });
-// pokemonList.forEach(function(pokemon) {
-//   // document.write(pokemon.name + ' is size ' + pokemon.height + ' and is the type ' + pokemon.types + '<br>')
-//   document.querySelector('ul');
-// })
-
-
-
-// for (let i=0; i < pokemonList.length; i++){
-//   if (pokemonList[i].height <=6){
-//   document.write(pokemonList[i].name + ' (height: ' + pokemonList[i].height + ')' + '<br>');
-//   }
-//
-//   else if (pokemonList[i].height >6){
-//   document.write(pokemonList[i].name + ' (height: ' + pokemonList[i].height + ')' + " - Wow, that's big!" + '<br>');
-//   }
-// }
-
-
-// document.write(pokemonList[0].name, ' (height: ' + pokemonList[0].height + ')' + '<br>');
-// document.write(pokemonList[1].name, ' (height: ' + pokemonList[1].height + ')' + '<br>');
-// document.write(pokemonList[2].name, ' (height: ' + pokemonList[2].height + ')' + '<br>');
-
-// for (let i=0; i < pokemonList.length; i++){
-//   if (pokemonList[i].height <=6){
-//   console.log(pokemonList[i].name)
-//     document.write(pokemonList[0].name, 'height')
-//
-//   }else if (pokemonList[i].height >6){
-//   console.log(pokemonList[i].name + "Wow, that's big!")
-//     document.write(pokemonList[1].name, 'height')
-//
-//     }document.write(pokemonList[2].name, 'height')
-// }
 
 function validateEmail() {
   let value = emailInput.value;
@@ -307,12 +215,13 @@ document.querySelector('#show-modal').addEventListener('click', () => {
   showModal('Modal title', 'This is the modal content!');
 });
 
-let closeButtonElement = document.createElement('button');
-closeButtonElement.classList.add('modal-close');
-closeButtonElement.innerText = 'Close';
-closeButtonElement.addEventListener('click', hideModal);
 
 function hideModal() {
   let modalContainer = document.querySelector('#modal-container');
   modalContainer.classList.remove('is-visible');
 }
+
+let closeButtonElement = document.createElement('button');
+closeButtonElement.classList.add('modal-close');
+closeButtonElement.innerText = 'Close';
+closeButtonElement.addEventListener('click', hideModal);
