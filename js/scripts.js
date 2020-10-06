@@ -307,13 +307,12 @@ document.querySelector('#show-modal').addEventListener('click', () => {
   showModal('Modal title', 'This is the modal content!');
 });
 
+let closeButtonElement = document.createElement('button');
+closeButtonElement.classList.add('modal-close');
+closeButtonElement.innerText = 'Close';
+closeButtonElement.addEventListener('click', hideModal);
 
 function hideModal() {
   let modalContainer = document.querySelector('#modal-container');
   modalContainer.classList.remove('is-visible');
 }
-
-let closeButtonElement = document.createElement('button');
-closeButtonElement.classList.add('modal-close');
-closeButtonElement.innerText = 'Close';
-closeButtonElement.addEventListener('click', hideModal);
