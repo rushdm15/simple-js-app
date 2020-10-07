@@ -270,3 +270,4 @@ function showDialog(title, text) {
     // This can be used to reject from other functions
     dialogPromiseReject = reject;
   });
+};
