@@ -261,7 +261,7 @@ document.querySelector('#show-modal').addEventListener('click', () => {
 
 document.querySelector('#show-dialog').addEventListener('click', () => {
   showDialog('Confirm action', 'Are you sure you want to do this?');
-  .then(function() {
+  then(function() {
     alert('confirmed!');
   }, () => {
     alert('not confirmed');
