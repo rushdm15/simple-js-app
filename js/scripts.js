@@ -1,5 +1,6 @@
 //[name, height, types]
 let pokemonRepository = (function () {
+  let modalContainer = document.querySelector('#modal-container');
   let pokemonList = [];
   let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 
@@ -65,13 +66,11 @@ let pokemonRepository = (function () {
   }
 
   window.addEventListener('keydown', (e) => {
-    let modalContainer = document.querySelector('#modal-container');
     if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
       hideModal();
     }
   });
 
-  let modalContainer = document.querySelector('#modal-container');
   modalContainer.addEventListener('click', (e) => {
     // Since this is also triggered when clicking INSIDE the modal
     // We only want to close if the user clicks directly on the overlay
@@ -91,8 +90,6 @@ let pokemonRepository = (function () {
   };
 
   function showModal(title, text) {
-    let modalContainer = document.querySelector('#modal-container');
-
     // Clear all existing modal content
     modalContainer.innerHTML = '';
 
@@ -120,14 +117,13 @@ let pokemonRepository = (function () {
   }
 
   function hideModal() {
-    let modalContainer = document.querySelector('#modal-container');
     modalContainer.classList.remove('is-visible');
   }
 
   document.querySelector('#show-modal').addEventListener('click', () => {
     showModal('Modal title', 'This is the modal content!');
   });
-  
+
 })();
 
 console.log(pokemonRepository.getAll());
