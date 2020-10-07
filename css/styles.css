@@ -14,16 +14,6 @@
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
 }
 
-
-#modal-container {
-  display: none;
-}
-
-#modal-container.is-visible {
-  /* CSS for modal container - add your own desired CSS styles here */
-  display: block;
-}
-
 html,
 body {
   font-family: Arial, sans-serif;
