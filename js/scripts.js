@@ -91,6 +91,8 @@ let pokemonRepository = (function () {
   };
 })();
 
+//END OF IIFE ---------------------------------------------------
+
 console.log(pokemonRepository.getAll());
 pokemonRepository.add({ name: 'Charmander', height: '10', types: ['fire'] });
 // console.log(pokemonRepository.add( ' Charmander' ));
@@ -101,6 +103,8 @@ pokemonRepository.loadList().then(function() {
     pokemonRepository.addListItem (pokemon);
   });
 });
+
+//FORM VALIDATION------------------------------------------
 
 function validateEmail() {
   let value = emailInput.value;
@@ -175,6 +179,8 @@ function validateForm() {
 emailInput.addEventListener('input', validateEmail);
 passwordInput.addEventListener('input', validatePassword);
 
+//MODAL ---------------------------------------
+
 function showModal(title, text) {
   let modalContainer = document.querySelector('#modal-container');
 
@@ -218,6 +224,8 @@ function hideModal() {
 document.querySelector('#show-modal').addEventListener('click', () => {
   showModal('Modal title', 'This is the modal content!');
 });
+
+// DIALOG -------------------------------------------------
 
 document.querySelector('#show-dialog').addEventListener('click', () => {
   showDialog('Confirm action', 'Are you sure you want to do this?');
