@@ -1,4 +1,5 @@
 let emailInput = document.querySelector('#email');
+let passwordInput = document.querySelector('#password');
 //[name, height, types]
 let pokemonRepository = (function () {
   let pokemonList = [];
