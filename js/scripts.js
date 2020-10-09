@@ -13,10 +13,6 @@ let pokemonRepository = (function () {
     return pokemonList;
   }
 
-  function showDetails(pokemon) {
-  console.log(pokemon);
-  }
-
   function addListItem (pokemon) {
     let pokemonlist = document.querySelector('.pokemon-list');
     let listpokemon = document.createElement('li');
