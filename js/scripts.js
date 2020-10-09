@@ -106,7 +106,7 @@ pokemonRepository.loadList().then(function() {
   });
 });
 
-//FORM VALIDATION------------------------------------------
+//FORM VALIDATION  =========================================
 
 function validateEmail() {
   let value = emailInput.value;
@@ -181,7 +181,7 @@ function validateForm() {
 emailInput.addEventListener('input', validateEmail);
 passwordInput.addEventListener('input', validatePassword);
 
-//MODAL ---------------------------------------
+//MODAL ====================================================
 
 function showModal(title, text) {
   let modalContainer = document.querySelector('#modal-container');
@@ -227,7 +227,7 @@ document.querySelector('#show-modal').addEventListener('click', () => {
   showModal('Modal title', 'This is the modal content!');
 });
 
-// DIALOG -------------------------------------------------
+// DIALOG ==============================================
 
 document.querySelector('#show-dialog').addEventListener('click', () => {
   showDialog('Confirm action', 'Are you sure you want to do this?');
