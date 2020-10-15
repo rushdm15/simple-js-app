@@ -224,48 +224,48 @@ function hideModal() {
 // });
 
 // DIALOG ==============================================
-
-document.querySelector('#show-dialog').addEventListener('click', () => {
-  showDialog('Confirm action', 'Are you sure you want to do this?');
-  then(function() {
-    alert('confirmed!');
-  }, () => {
-    alert('not confirmed');
-  });
-});
-
-function showDialog(title, text) {
-  showModal(title, text);
-
-  // We have defined modalContainer here
-  let modalContainer = document.querySelector('#modal-container');
-
-  // We want to add a confirm and cancel button to the modal
-  let modal = modalContainer.querySelector('.modal');
-
-  let confirmButton = document.createElement('button');
-  confirmButton.classList.add('modal-confirm');
-  confirmButton.innerText = 'Confirm';
-
-  let cancelButton = document.createElement('button');
-  cancelButton.classList.add('modal-cancel');
-  cancelButton.innerText = 'Cancel';
-
-  modal.appendChild(confirmButton);
-  modal.appendChild(cancelButton);
-
-  // We want to focus the confirmButton so that the user can simply press Enter
-  confirmButton.focus();
-
-  // Return a promise that resolves when confirmed, else rejects
-  return new Promise((resolve, reject) => {
-    cancelButton.addEventListener('click', hideModal);
-    confirmButton.addEventListener('click', () => {
-      dialogPromiseReject = null; // Reset this
-      hideModal();
-      resolve();
-    });
-    // This can be used to reject from other functions
-    dialogPromiseReject = reject;
-  });
-};
+//
+// document.querySelector('#show-dialog').addEventListener('click', () => {
+//   showDialog('Confirm action', 'Are you sure you want to do this?');
+//   then(function() {
+//     alert('confirmed!');
+//   }, () => {
+//     alert('not confirmed');
+//   });
+// });
+//
+// function showDialog(title, text) {
+//   showModal(title, text);
+//
+//   // We have defined modalContainer here
+//   let modalContainer = document.querySelector('#modal-container');
+//
+//   // We want to add a confirm and cancel button to the modal
+//   let modal = modalContainer.querySelector('.modal');
+//
+//   let confirmButton = document.createElement('button');
+//   confirmButton.classList.add('modal-confirm');
+//   confirmButton.innerText = 'Confirm';
+//
+//   let cancelButton = document.createElement('button');
+//   cancelButton.classList.add('modal-cancel');
+//   cancelButton.innerText = 'Cancel';
+//
+//   modal.appendChild(confirmButton);
+//   modal.appendChild(cancelButton);
+//
+//   // We want to focus the confirmButton so that the user can simply press Enter
+//   confirmButton.focus();
+//
+//   // Return a promise that resolves when confirmed, else rejects
+//   return new Promise((resolve, reject) => {
+//     cancelButton.addEventListener('click', hideModal);
+//     confirmButton.addEventListener('click', () => {
+//       dialogPromiseReject = null; // Reset this
+//       hideModal();
+//       resolve();
+//     });
+//     // This can be used to reject from other functions
+//     dialogPromiseReject = reject;
+//   });
+// };
