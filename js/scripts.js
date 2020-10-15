@@ -179,69 +179,49 @@ passwordInput.addEventListener('input', validatePassword);
 
 //MODAL ====================================================
 
-<div class="modal" tabindex="-1" role="dialog">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <p>Modal body text goes here.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
+function showModal(title, text) {
+  let modalContainer = document.querySelector('#modal-container');
 
-// function showModal(title, text) {
-//   let modalContainer = document.querySelector('#modal-container');
-//
-//   // Clear all existing modal content
-//   modalContainer.innerHTML = '';
-//
-//   let modal = document.createElement('div');
-//   modal.classList.add('modal');
-//
-//   // Add the new modal content
-//   let closeButtonElement = document.createElement('button');
-//   closeButtonElement.classList.add('modal-close');
-//   closeButtonElement.innerText = 'Close';
-//   closeButtonElement.addEventListener('click', hideModal);
-//
-//   let titleElement = document.createElement('h1');
-//   titleElement.innerText = title;
-//
-//   let contentElement = document.createElement('p');
-//   contentElement.innerText = text;
-//
-//   modal.appendChild(closeButtonElement);
-//   modal.appendChild(titleElement);
-//   modal.appendChild(contentElement);
-//   modalContainer.appendChild(modal);
-//
-//   modalContainer.classList.add('is-visible');
-// }
-//
-// let dialogPromiseReject; // This can be set later, by showDialog
-//
-// function hideModal() {
-//   let modalContainer = document.querySelector('#modal-container');
-//   modalContainer.classList.remove('is-visible');
-//   if (dialogPromiseReject) {
-//    dialogPromiseReject();
-//    dialogPromiseReject = null;
-//  }
-// }
-//
-// document.querySelector('#show-modal').addEventListener('click', () => {
-//   showModal('Modal title', 'This is the modal content!');
-// });
+  // Clear all existing modal content
+  modalContainer.innerHTML = '';
+
+  let modal = document.createElement('div');
+  modal.classList.add('modal');
+
+  // Add the new modal content
+  let closeButtonElement = document.createElement('button');
+  closeButtonElement.classList.add('modal-close');
+  closeButtonElement.innerText = 'Close';
+  closeButtonElement.addEventListener('click', hideModal);
+
+  let titleElement = document.createElement('h1');
+  titleElement.innerText = title;
+
+  let contentElement = document.createElement('p');
+  contentElement.innerText = text;
+
+  modal.appendChild(closeButtonElement);
+  modal.appendChild(titleElement);
+  modal.appendChild(contentElement);
+  modalContainer.appendChild(modal);
+
+  modalContainer.classList.add('is-visible');
+}
+
+let dialogPromiseReject; // This can be set later, by showDialog
+
+function hideModal() {
+  let modalContainer = document.querySelector('#modal-container');
+  modalContainer.classList.remove('is-visible');
+  if (dialogPromiseReject) {
+   dialogPromiseReject();
+   dialogPromiseReject = null;
+ }
+}
+
+document.querySelector('#show-modal').addEventListener('click', () => {
+  showModal('Modal title', 'This is the modal content!');
+});
 
 // DIALOG ==============================================
 
