@@ -183,24 +183,33 @@ pokemonRepository.loadList().then(function() {
 
 //MODAL ====================================================
 
-function showModal(title, text) {
-  let modalContainer = document.querySelector('#modal-container');
+// function showModal(title, text) {   //OLD
+//   let modalContainer = document.querySelector('#modal-container');
 
   function showModal(pokemon) {
     let modalBody = $(".modal-body");
     let modalTitle = $(".modal-title");
 
   // Clear all existing modal content
-  modalContainer.innerHTML = '';
+  // modalContainer.innerHTML = '';
 
-  let modal = document.createElement('div');
-  modal.classList.add('modal');
+  // let modal = document.createElement('div');
+  // modal.classList.add('modal');
 
-  // Add the new modal content
-  let closeButtonElement = document.createElement('button');
-  closeButtonElement.classList.add('modal-close');
-  closeButtonElement.innerText = 'Close';
-  closeButtonElement.addEventListener('click', hideModal);
+  // Add the //OLD modal content
+  // let closeButtonElement = document.createElement('button');
+  // closeButtonElement.classList.add('modal-close');
+  // closeButtonElement.innerText = 'Close';
+  // closeButtonElement.addEventListener('click', hideModal);
+  //
+  // let titleElement = document.createElement('h1');
+  // titleElement.innerText = title;
+  //
+  // let contentElement = document.createElement('p');
+  // contentElement.innerText = text;
+  //
+  modalTitle.empty(); //empties anything that was previously stored in these variables
+  modalBody.empty();
 
   //add the new content into the new "modal" div (Name, height, and image content)
   //Name element
@@ -223,14 +232,19 @@ function showModal(title, text) {
   // modal.appendChild(contentElement);
   // modalContainer.appendChild(modal);
 
-function hideModal() {
-  let modalContainer = document.querySelector('#modal-container');
-  modalContainer.classList.remove('is-visible');
-  if (dialogPromiseReject) {
-   dialogPromiseReject();
-   dialogPromiseReject = null;
- }
+  // modalContainer.classList.add('is-visible');
 }
+
+// let dialogPromiseReject; // This can be set later, by showDialog
+//
+// function hideModal() {
+//   let modalContainer = document.querySelector('#modal-container');
+//   modalContainer.classList.remove('is-visible');
+//   if (dialogPromiseReject) {
+//    dialogPromiseReject();
+//    dialogPromiseReject = null;
+//  }
+// }
 
 // document.querySelector('#show-modal').addEventListener('click', () => {
 //   showModal('Modal title', 'This is the modal content!');
@@ -288,8 +302,9 @@ function hideModal() {
 //   let modalBody = $(".modal-body");
 //   let modalTitle = $(".modal-title");
 //
-//   modalTitle.empty(); //empties anything that was previously stored in these variables
-//   modalBody.empty();
+
+  // modalTitle.empty(); //empties anything that was previously stored in these variables
+  // modalBody.empty();
 //
 //   //add the new content into the new "modal" div (Name, height, and image content)
 //   //Name element
