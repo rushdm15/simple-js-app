@@ -60,9 +60,9 @@ function addListItem(pokemon) {
          });
        }
 
-    function showDetails(item) {
-    loadDetails(item).then(function () {
-        showModal(item.name, item.height);
+    function showDetails(pokemon) {
+    loadDetails(pokemon).then(function () {
+        showModal(pokemon);
     });
   }
 
