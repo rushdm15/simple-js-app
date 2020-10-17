@@ -186,6 +186,10 @@ pokemonRepository.loadList().then(function() {
 function showModal(title, text) {
   let modalContainer = document.querySelector('#modal-container');
 
+  function showModal(pokemon) {
+    let modalBody = $(".modal-body");
+    let modalTitle = $(".modal-title");
+
   // Clear all existing modal content
   modalContainer.innerHTML = '';
 
