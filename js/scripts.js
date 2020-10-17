@@ -91,10 +91,10 @@ let pokemonRepository = (function () {
 
 //END OF IIFE ---------------------------------------------------
 
-console.log(pokemonRepository.getAll());
-pokemonRepository.add({ name: 'Charmander', height: '10', types: ['fire'] });
-// console.log(pokemonRepository.add( ' Charmander' ));
-console.log(pokemonRepository.getAll());
+// console.log(pokemonRepository.getAll());
+// pokemonRepository.add({ name: 'Charmander', height: '10', types: ['fire'] });
+// // console.log(pokemonRepository.add( ' Charmander' ));
+// console.log(pokemonRepository.getAll());
 
 pokemonRepository.loadList().then(function() {
   pokemonRepository.getAll().forEach(function (pokemon) {
