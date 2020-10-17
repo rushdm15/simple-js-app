@@ -202,21 +202,26 @@ function showModal(title, text) {
   closeButtonElement.innerText = 'Close';
   closeButtonElement.addEventListener('click', hideModal);
 
-  let titleElement = document.createElement('h1');
-  titleElement.innerText = title;
+  //add the new content into the new "modal" div (Name, height, and image content)
+  //Name element
+  let nameElement = $("<h1>" + pokemon.name + "</h1>");
 
-  let contentElement = document.createElement('p');
-  contentElement.innerText = text;
+  //Height content
+  let heightElement = $("<p>" + "Height: " + pokemon.height + "</p>");
 
-  modal.appendChild(closeButtonElement);
-  modal.appendChild(titleElement);
-  modal.appendChild(contentElement);
-  modalContainer.appendChild(modal);
+  //Image content
+  let imageElement = $('<img class="modal-img" style="width:50%">');
+  imageElement.attr("src", pokemon.imageUrl);
 
-  modalContainer.classList.add('is-visible');
-}
+  //appends the children to their parent containers
+  modalTitle.append(nameElement);
+  modalBody.append(imageElement);
+  modalBody.append(heightElement);
 
-let dialogPromiseReject; // This can be set later, by showDialog
+  // modal.appendChild(closeButtonElement);
+  // modal.appendChild(titleElement);
+  // modal.appendChild(contentElement);
+  // modalContainer.appendChild(modal);
 
 function hideModal() {
   let modalContainer = document.querySelector('#modal-container');
