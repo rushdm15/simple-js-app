@@ -87,6 +87,33 @@ pokemonRepository.loadList().then(function() {
   });
 });
 
+//MODAL ====================================================
+
+  function showModal(pokemon) {
+    let modalBody = $(".modal-body");
+    let modalTitle = $(".modal-title");
+
+  modalTitle.empty(); //empties anything that was previously stored in these variables
+  modalBody.empty();
+
+  //add the new content into the new "modal" div (Name, height, and image content)
+  //Name element
+  let nameElement = $("<h1>" + pokemon.name + "</h1>");
+
+  //Height content
+  let heightElement = $("<p>" + "Height: " + pokemon.height + "</p>");
+
+  //Image content
+  let imageElement = $('<img class="modal-img" style="width:50%">');
+  imageElement.attr("src", pokemon.imageUrl);
+
+  //appends the children to their parent containers
+  modalTitle.append(nameElement);
+  modalBody.append(imageElement);
+  modalBody.append(heightElement);
+
+}
+
 //FORM VALIDATION  =========================================
 
 // function validateEmail() {
@@ -162,24 +189,6 @@ pokemonRepository.loadList().then(function() {
 // emailInput.addEventListener('input', validateEmail);
 // passwordInput.addEventListener('input', validatePassword);
 
-  function showModal(pokemon) {
-    let modalBody = $(".modal-body");
-    let modalTitle = $(".modal-title");
-  //add the new content into the new "modal" div (Name, height, and image content)
-  //Name element
-  let nameElement = $("<h1>" + pokemon.name + "</h1>");
-
-  //Height content
-  let heightElement = $("<p>" + "Height: " + pokemon.height + "</p>");
-
-  //Image content
-  let imageElement = $('<img class="modal-img" style="width:50%">');
-  imageElement.attr("src", pokemon.imageUrl);
-
-  //appends the children to their parent containers
-  modalTitle.append(nameElement);
-  modalBody.append(imageElement);
-  modalBody.append(heightElement);
 
 // DIALOG ==============================================
 //
