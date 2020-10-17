@@ -13,18 +13,22 @@ let pokemonRepository = (function () {
     return pokemonList;
   }
 
-  function addListItem (pokemon) {
-    let pokemonlist = document.querySelector('.pokemon-list');
-    let listpokemon = document.createElement('li');
-    let button = document.createElement('button');
-    button.innerText = pokemon.name;
-    button.classList.add("button-class");
-    listpokemon.appendChild(button);
-    pokemonlist.appendChild(listpokemon);
-    button.addEventListener('click', function () {
-        showDetails(pokemon);
-    });
-  }
+  //This function adds a list item to the list for each pokemon
+function addListItem(pokemon) {
+  let list = $(".pokemon-list");
+  let listItem = $("<li></li>");
+  let button = $("<button>" + pokemon.name + "</button>");
+  button.addClass("btn-primary");
+  button.attr("data-toggle", "modal"); //this works with bootstrap to open the modal when the pokemon name button is clicked
+  button.attr("data-target", "#pokemonModal");
+  listItem.append(button);
+  list.append(listItem);
+
+  //This listens for the user to click on one of the pokemon in the list, then runs the showDetails() function
+  button.on("click", function(event) {
+    showDetails(pokemon);
+  });
+}
 
     function loadList() {
       return fetch(apiUrl).then(function (response) {
