@@ -1,4 +1,6 @@
-# Pokédex (JavaScript App) 
+# Pokédex (JavaScript App) 
+
+![pic.img](https://github.com/rushdm15/simple-js-app/blob/master/pic.png?raw=true)
 
 ### Description
 A small web application with HTML, CSS, and JavaScript that loads data from an external API and enables the viewing of data points in detail.
