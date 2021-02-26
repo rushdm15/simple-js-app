@@ -12,7 +12,9 @@ A small web application with HTML, CSS, and JavaScript that loads data from an e
 - DOM Interaction
 
 ● Render static data from data repository on the page.
+
 ● Add basic styling to app.
+
 ● Confirm application is accessible.
 
 - API's, Ajax & Asynchronous Behavior
@@ -30,5 +32,7 @@ A small web application with HTML, CSS, and JavaScript that loads data from an e
 - Performance Check & Debugging
 
 ● Ensure app works in all necessary browsers.
+
 ● Add ESLint rules and ensure code passes the validation test.
+
 ● Make final adjustments to app such as styling or usability improvements.
