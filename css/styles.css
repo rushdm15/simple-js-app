@@ -11,6 +11,7 @@ body {
   font-size: 22px;
   font-weight: bold;
   list-style-type: none;
+  column-count: 3;
 }
 
 .btn-primary {
