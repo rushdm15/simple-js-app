@@ -10,7 +10,7 @@ body {
   font-size: 22px;
   font-weight: 700;
   list-style-type: none;
-  column-count: 3;
+  column-count: 6;
 }
 .btn-primary {
   color: #e0fadb;
